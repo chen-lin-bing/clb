@@ -8,7 +8,7 @@
     $wwwGroup = 'root';
 
     //日志文件地址
-   $fs = fopen('.date.log', 'a');
+   $fs = fopen('./date.log', 'a');
 
     //获取GitHub发送的内容 
     $json = file_get_contents('php://input');
