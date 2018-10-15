@@ -4,7 +4,7 @@
     $secret = "";
     $wwwUser = 'root';
     $wwwGroup = 'root';
-  echo 1;
+//  echo 1;
     //日志文件地址
    $fs = fopen('./date.log', 'a');
 
