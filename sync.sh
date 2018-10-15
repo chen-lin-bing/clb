@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /www/clb
-git pull origin develop 2>> error.log
+git pull origin develop>error.log  2>&1
