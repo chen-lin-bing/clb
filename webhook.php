@@ -1,6 +1,4 @@
  <?php
-
-
     $target = '/www/clb'; // 生产环境web目录
     //密钥
     $secret = "";
@@ -27,9 +25,9 @@ if ($signature) {
   //  echo shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
    // exit();
 	
-        $cmd = "cd $target && git pull";
-        $res = shell_exec($cmd);
-
+       // $cmd = "cd $target && git pull";
+       // $res = shell_exec($cmd);
+	$res_log = '';
         $res_log .= 'Success:'.PHP_EOL;
         $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '个commit：' . PHP_EOL;
         $res_log .= $res.PHP_EOL;
