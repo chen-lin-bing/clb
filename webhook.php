@@ -20,14 +20,15 @@
    //  }
 //$signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 if ($signature) {
+	echo 1;
   $hash = "sha1=".hash_hmac('sha1', file_get_contents("php://input"), $secret);
   if (strcmp($signature, $hash) == 0) {
   //  echo shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
    // exit();
-	
+	echo 2;
        // $cmd = "cd $target && git pull";
        // $res = shell_exec($cmd);
-        echo 1;
+       // echo 1;
 	$res_log = '';
         $res_log .= 'Success:'.PHP_EOL;
         $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '个commit：' . PHP_EOL;
