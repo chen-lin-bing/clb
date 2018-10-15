@@ -12,7 +12,7 @@ if ($signature) {
   if (strcmp($signature, $hash) == 0) {
   // echo shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
  // echo '222';
- $a = file_put_contents('date.log','123');
+ $a = file_put_contents('date.txt','123');
 	var_dump($a);  
   exit();
   }
