@@ -27,13 +27,13 @@ if ($signature) {
 	
        // $cmd = "cd $target && git pull";
        // $res = shell_exec($cmd);
-        echo 1;
+      //  echo 1;
 	$res_log = '';
         $res_log .= 'Success:'.PHP_EOL;
         $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '个commit：' . PHP_EOL;
         $res_log .= $res.PHP_EOL;
         $res_log .= '======================================================================='.PHP_EOL;
-
+       echo $res_log;
         fwrite($fs, $res_log);
         $fs and fclose($fs);
 
