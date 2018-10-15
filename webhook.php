@@ -13,10 +13,10 @@ if ($signature) {
   // echo shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
  // echo '222';
 // $shell = 'echo  123 > date.log';
-  $a = file_put_contents('date.log','456');
+  file_put_contents('date.log',date('Y-m-d h:i:s'),FILE_APPEND);
  // exec($shell);
-       //var_dump($a);  
- 	 exit();
+       //var_dump($a); 
+     exit();
   }
 }
 http_response_code(404);
