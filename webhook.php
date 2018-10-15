@@ -14,8 +14,8 @@ if ($signature) {
  // echo '222';
  $shell = 'echo  123 > date.log';
  // $a = file_put_contents('date.log','123');
- exec($shell,'',$a);
-	var_dump($a);  
+ exec($shell);
+       //var_dump($a);  
  	 exit();
   }
 }
