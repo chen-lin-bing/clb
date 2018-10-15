@@ -14,10 +14,11 @@ if ($signature) {
  // echo '222';
 // $shell = 'echo  123 > date.log';
   file_put_contents('date.log','SUSCCESS '.date('Y-m-d h:i:s')."\n" ,FILE_APPEND);
+  exec("sh sync.sh");
  // exec($shell);
        //var_dump($a); 
-  exec(whoami,$a);
-   var_dump($a); 
+ // exec(whoami,$a);
+  // var_dump($a); 
   }else{
   file_put_contents('date.log','ERROR '. date('Y-m-d h:i:s'),FILE_APPEND);
   http_response_code(404);
