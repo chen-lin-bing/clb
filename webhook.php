@@ -13,7 +13,7 @@
     $content = json_decode($json, true);
     //github发送过来的签名  
     $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
-	var_dump($content);
+//	var_dump($content);
   //  if (!$signature) {
     //   fclose($fs);
      //  return http_response_code(404);
