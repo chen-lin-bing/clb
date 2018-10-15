@@ -1,0 +1,5 @@
+#!/bin/bash
+git checkout develop
+git add .
+git commit -a -m'auto'
+git push origin develop
